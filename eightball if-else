@@ -1,0 +1,27 @@
+let randomNumber = Math.floor(Math.random() * 7);
+let userQuestion = "will I ever get really good at coding?";
+let eightBall = (randomNumber);
+
+
+if (eightBall === 0) {
+  eightBall = "it is certain";
+} else if (eightBall === 1) {
+  eightBall = "hells yeah";
+} else if (eightBall === 2) {
+  eightBall = "you betcha";
+} else if (eightBall === 3) {
+eightBall = "damn right";
+} else if (eightBall === 4) {
+  eightBall ="it has been prophecized";
+} else if (eightBall === 5) {
+  eightBall = "of course, bro";
+} else if (eightBall === 6) {
+ eightBall = "absolutely, you da man";
+} else if (eightBall === 7) {
+  eightBall = "it has been written";
+} else {
+ eightBall = "yessssir";
+}
+
+console.log(userQuestion)
+console.log(`the eightball answered: ${eightBall}`)
