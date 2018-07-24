@@ -1,0 +1,34 @@
+var userQuestion = 'Is the life of a programmer one of excitement, intrigue, and success?';
+var randomNumber = Math.floor(Math.random() * 7)
+var eightBall = ''
+switch(randomNumber) {
+  case 0:
+    eightBall = 'It is decidedly so'
+    break;
+  case 1:
+    eightBall = 'prediction hazy try again'
+    break
+  case 2:
+    eightBall = 'cannot predict now'
+    break
+  case 3:
+    eightBall = 'don\'t count on it'
+    break
+  case 4:
+    eightBall = 'my sources say no'
+    break
+  case 5:
+    eightBall = 'outlook not so good'
+    break
+  case 6:
+    eightBall = 'it is certain'
+    break
+  case 7:
+    eightBall = 'signs point to yes'
+    break
+  default:
+    eightBall = 'Idk LOL'
+}
+
+console.log('The user asked: ' + userQuestion);
+console.log('The eight ball answered ' + eightBall);
