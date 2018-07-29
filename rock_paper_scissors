@@ -1,0 +1,70 @@
+
+let userInput = ""
+const getUserChoice = (userInput) => {
+  if (userInput === "bomb"){
+    return "bomb"
+} else if (userInput === "rock") {
+return "rock"
+} else if (userInput === "paper") {
+  return "paper"
+} else if (userInput === "scissors") {
+  return "scissors"
+} else {
+  return "Error"
+} 
+}
+userInput = userInput.toLowerCase();
+
+//console.log(getUserChoice("paper")) 
+
+
+const getComputerChoice = () => {
+let randomNumber =  Math.floor(Math.random() * 3)
+switch (randomNumber) {
+  case 0:
+    return "rock"
+    break;
+  case 1:
+    return "paper"
+    break;
+  case 2:
+    return "scissors"
+    break;
+  default:
+    return "error"
+}
+}
+//console.log(getComputerChoice())
+
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === "bomb") {
+    return "user wins the game!"
+  } else if (userChoice === computerChoice) {
+    return "the game is a tie!";
+  } else if (userChoice === "rock" && computerChoice === "scissors") {
+    return "user wins the game!";
+  } else if (userChoice === "paper" && computerChoice === "rock") {
+    return "user wins the game!";
+  } else if (userChoice === "scissors" && computerChoice === "paper") {
+    return "user wins the game!";
+  } else if (userChoice === "rock" && computerChoice === "paper") {
+    return "computer wins the game!";
+  } else if (userChoice === "paper" && computerChoice === "scissors") {
+    return "computer wins the game!";
+  } else if (userChoice === "scissors" && computerChoice === "rock") {
+    return "computer wins the game!";
+  } else {
+    return "error";
+  }
+}
+
+//console.log(determineWinner("rock", "paper"))
+
+function playGame() {
+  userChoice = getUserChoice("rock")
+  computerChoice = getComputerChoice()
+  console.log(`you threw ${userChoice}`)
+  console.log(`the computer threw ${computerChoice}`)
+  console.log(determineWinner(userChoice, computerChoice))
+}
+playGame()
