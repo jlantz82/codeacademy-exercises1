@@ -1,0 +1,34 @@
+let input = "i love coding";
+
+let vowels = ["a", "e", "i", "o", "u"];
+
+let resultArray = []
+//set empty array because it'll be filled in later with .push()
+
+for (let inputIndex = 0; inputIndex < input.length; inputIndex++) {
+  
+  for (let vowelsIndex = 0; vowelsIndex < vowels.length; vowelsIndex++){
+  //write 2 for loops so that with every iteration it checks your list of vowels
+ 
+  if (input[inputIndex] === vowels[vowelsIndex]){
+    resultArray.push(input[inputIndex])
+  }
+}
+
+  if (input[inputIndex] === "e") {
+    resultArray.push(input[inputIndex])
+  }
+  if (input[inputIndex] === "u") {
+    resultArray.push(input[inputIndex])
+  
+}
+}
+
+console.log(resultArray.join("").toUpperCase())
+
+
+
+
+
+
+
